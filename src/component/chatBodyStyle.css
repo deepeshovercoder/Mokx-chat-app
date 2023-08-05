@@ -1,0 +1,107 @@
+/* Style for the chat message input */
+#chat-message-input {
+  margin-right: -5px;
+}
+#chat-message-container{
+  height: 75vh;
+}
+
+/* Styles for the chat messages container */
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 138px); /* Calculate the height to fit the remaining viewport height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  transition: all 0.5s; /* Smooth transition effect for changes */
+}
+
+/* Styling for all images inside the chat body */
+img {
+  height: 80px;
+  width: 80px;
+}
+
+/* Style for strong elements, e.g., the user name */
+strong {
+  font-size: larger;
+}
+
+/* Styling for the left and right chat messages */
+.chat-message-left,
+.chat-message-right {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Style for the left chat message (received message) */
+.chat-message-left {
+  margin-right: auto; /* Push the chat message to the right */
+}
+
+/* Style for the right chat message (sent message) */
+.chat-message-right {
+  flex-direction: row-reverse; /* Reverse the order of the elements for sent messages */
+  margin-left: auto; /* Push the chat message to the left */
+}
+
+/* Typing bubble style */
+.chat-bubble {
+  background-color: #fff3cd;
+  padding: 16px 28px;
+  border-radius: 20px;
+  border-bottom-left-radius: 2px;
+  display: inline-block;
+}
+
+/* Styling for the typing animation */
+.typing {
+  align-items: center;
+  display: flex;
+  height: 17px;
+}
+
+.typing .dot {
+  animation: mercuryTypingAnimation 1s infinite ease-in-out; /* Apply the typing animation to the dots */
+  background-color: #fff0c0;
+  border-radius: 50%;
+  height: 7px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 7px;
+  display: inline-block;
+}
+
+.typing .dot:nth-child(1) {
+  animation-delay: 200ms; /* Delay for the first dot */
+}
+
+.typing .dot:nth-child(2) {
+  animation-delay: 300ms; /* Delay for the second dot */
+}
+
+.typing .dot:nth-child(3) {
+  animation-delay: 400ms; /* Delay for the third dot */
+}
+
+.typing .dot:last-child {
+  margin-right: 0; /* Remove right margin for the last dot */
+}
+
+/* Keyframes for the typing animation */
+@keyframes mercuryTypingAnimation {
+  0% {
+    transform: translateY(0px); /* Initial position */
+    background-color: #ffc003;
+  }
+  28% {
+    transform: translateY(-7px); /* Move up during animation */
+    background-color: #e4bf52;
+  }
+  44% {
+    transform: translateY(0px); /* Return to the initial position */
+    background-color: #dac587;
+  }
+}
+
+
