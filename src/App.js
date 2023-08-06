@@ -4,7 +4,7 @@ import ChatBody from "./component/ChatBody";
 import "./App.css"
 function App() {
   return (
-    <ChatBody />
+    <Login />
   )
 }
 export default App;
